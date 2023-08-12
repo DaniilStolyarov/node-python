@@ -4,8 +4,6 @@ const fs = require('fs')
 const {PythonShell} = require('python-shell');
 
 var http = require('http');
-const { isNumberObject } = require('util/types');
-const { type } = require('os');
 http.globalAgent.maxSockets = 20;
 
 const app = express()
