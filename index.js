@@ -13,11 +13,14 @@ app.use(express.static('./static'))
 console.log(process.argv[2])
 
 const windows_path = {python : ".\\py-script\\venv\\Scripts\\python.exe", script : ".\\py-script\\"}
-const linux_path = {python : "./py-script/venv/bin/python" , script : "./py-script"}
+const linux_path = {python : "./py-script/venv/bin/python3" , script : "./py-script"}
 
 let pyShell = new PythonShell('main.py', {pythonPath : linux_path.python, scriptPath : linux_path.script})
 
-
+pyShell.on('error', (err) =>
+{
+    console.log(err)
+})
 app.post('/upload/image', formidable(), async (req, res) =>
 {
     const string = req.fields.image
