@@ -13,7 +13,7 @@ app.use(express.static('./static'))
 console.log(process.argv[2])
 
 const windows_path = {python : ".\\py-script\\venv\\Scripts\\python.exe"}
-const linux_path = {python : ".\\py-script\\venv\\bin\\python" }
+const linux_path = {python : "./py-script/venv/bin/python" }
 
 let pyShell = new PythonShell('main.py', {pythonPath : linux_path.python, scriptPath : ".\\py-script\\"})
 
