@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from keras.datasets import mnist
 import cv2
-import sys
+
 
 add_path = './py-script'
 
