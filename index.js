@@ -21,6 +21,10 @@ pyShell.on('error', (err) =>
 {
     console.log(err)
 })
+pyShell.on('stderr', (err) =>
+{
+    console.log(err)
+})
 app.post('/upload/image', formidable(), async (req, res) =>
 {
     const string = req.fields.image
