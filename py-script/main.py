@@ -9,7 +9,7 @@ add_path = './py-script'
 
 model = keras.models.load_model(add_path + '/model')
 
-filename = add_path + './image.png'
+filename = add_path + '/image.png'
 
 while True:
     incoming_message = input()
