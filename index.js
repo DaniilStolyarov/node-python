@@ -10,7 +10,12 @@ const app = express()
 
 app.use(express.static('./static'))
 
-let pyShell = new PythonShell('main.py', {pythonPath : ".\\py-script\\venv\\Scripts\\python.exe", scriptPath : ".\\py-script\\"})
+console.log(process.argv[2])
+
+const windows_path = {python : ".\\py-script\\venv\\Scripts\\python.exe"}
+const linux_path = {python : ".\\py-script\\venv\\bin\\python" }
+
+let pyShell = new PythonShell('main.py', {pythonPath : linux_path.python, scriptPath : ".\\py-script\\"})
 
 
 app.post('/upload/image', formidable(), async (req, res) =>
