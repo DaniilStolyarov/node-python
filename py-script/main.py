@@ -1,7 +1,6 @@
 import keras
 import matplotlib.pyplot as plt
 import numpy as np
-from keras.datasets import mnist
 import cv2
 
 
